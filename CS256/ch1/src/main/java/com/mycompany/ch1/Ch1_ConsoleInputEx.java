@@ -10,7 +10,7 @@
  * change directory with command cd to classes folder (in windows)
  * in classes subfolder, run: java ch1_consoleinputex.Ch1_ConsoleInputEx
  */
-package ch1_consoleinputex;
+package com.mycompany.ch1;
 
 import java.io.Console;
 import java.util.Scanner;
