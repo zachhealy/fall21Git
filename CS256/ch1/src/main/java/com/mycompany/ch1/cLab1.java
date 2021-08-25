@@ -9,7 +9,7 @@ public class cLab1 {
 
     public static void main(String[] args){
         boolean array[];
-        array = new boolean[151];
+        array = new boolean[150];
         mailClosed(array);
         everyOther(array);
         checkClosed(array);
