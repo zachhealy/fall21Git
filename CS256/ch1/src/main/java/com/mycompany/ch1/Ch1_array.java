@@ -2,7 +2,7 @@
  * This example reviews java 1-D array, method and constant
  * This example also reviews Java method is pass by value
  * @author ziping
- * date: August 23, 2020
+ * date: August 23, 2021
  */
 package com.mycompany.ch1;
 
