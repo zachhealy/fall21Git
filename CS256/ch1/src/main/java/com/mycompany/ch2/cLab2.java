@@ -1,3 +1,10 @@
+/*  
+Author: Zach Healy
+Date: 8/29/2021
+Purpose: This code will make an account, then allow the account holder to make deposits, 
+         withdrawls, and see any needed info about the account.
+*/
+
 package com.mycompany.ch2;
 
 import java.util.Date;
@@ -14,11 +21,12 @@ public class cLab2{
         System.out.println("This account was created at "+account.getDateCreated());
     }
 
-    public class Account {
+
+    static class Account {
         private int id;
         private double balance;
         private double annualInterestRate;
-        private Date dateCreated;
+        private Date dateCreated = new Date();
     
         public Account(){
             id = 0;
@@ -70,7 +78,7 @@ public class cLab2{
     
         }
         public double deposit(double amount){
-            return balance = balance - amount;
+            return balance = balance + amount;
     
         }
         

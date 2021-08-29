@@ -12,7 +12,6 @@
  */
 package com.mycompany.ch1;
 
-import java.io.Console;
 import java.util.Scanner;
 
 /**
@@ -52,6 +51,7 @@ public class Ch1_ConsoleInputEx {
             num = scanner.nextInt();
         }
         System.out.println("the summation is:" + sum);
+        scanner.close();
     }
     
 }

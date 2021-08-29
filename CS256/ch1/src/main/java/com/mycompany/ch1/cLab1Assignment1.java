@@ -15,6 +15,8 @@ public class cLab1Assignment1 {
         System.out.println("The Diameter = " + rad * 2);
         System.out.println("The Circumference = " + 2 * 3.14 * rad);
         System.out.println("The Area = " + 2.14 * (rad * rad));
+
+        input.close();
     }
 }
 
