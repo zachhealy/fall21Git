@@ -1,9 +1,12 @@
 package com.mycompany.ch2;
 
+import java.util.Date;
+
 public class Account {
     private int id;
     private double balance;
     private double annualInterestRate;
+    private Date dateCreated;
 
     public Account(){
         id = 0;
@@ -11,9 +14,10 @@ public class Account {
         annualInterestRate = 0;
 
     }
-    public newAccount(int nID, double nBalance){
+    public void newAccount(int nID, double nBalance, int newAIR){
         id = nID;
         balance = nBalance;
+        annualInterestRate = newAIR;
 
     }
     public int getID(){
@@ -28,8 +32,12 @@ public class Account {
         return annualInterestRate;
 
     }
+    public void getDateCreated(Date newDateCreated){
+        dateCreated = newDateCreated;
+
+    }
     public double getMonthlyInterest(){
-        return balance * annualInterestRate;
+        return annualInterestRate/12;
 
     }
 
@@ -37,4 +45,22 @@ public class Account {
         balance = newBal;
 
     }
+    public void setID(int newID){
+        id = newID;
+
+    }
+    public void setAnnualInterestRate(int newAIR){
+        id = newAIR;
+
+    }
+
+    public double withdrawl(double amount){
+        return balance = balance - amount;
+
+    }
+    public double deposit(double amount){
+        return balance = balance - amount;
+
+    }
+    
 }
