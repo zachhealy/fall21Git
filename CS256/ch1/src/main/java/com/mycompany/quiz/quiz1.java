@@ -2,7 +2,8 @@ package com.mycompany.quiz;
 /*  
 Author: Zach Healy
 Date: 8/29/2021
-Purpose: This code will define a playing card, allow the user to access the card info, as well as compare cards to see which is greater.
+Purpose: This code will define a playing card, allow the user to access the card info, 
+as well as compare cards to see which is greater.
 */
 public class quiz1 {
     public static void main(String[] args) {
