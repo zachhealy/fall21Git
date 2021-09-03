@@ -1,5 +1,11 @@
 package com.mycompany.ch2;
 
+/*  
+Author: Zach Healy
+Date: 9/3/2021
+Purpose: Create the MyInteger class and use it to test various aspects of an assigned number..
+*/
+
 public class clab3 {
     public static void main(String[] args) {
         MyInteger n1 = new MyInteger(5);
