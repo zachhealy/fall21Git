@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaclassex3_point2d;
+package com.mycompany.ch2;
 
 //import javafx.geometry.Point2D;
 
