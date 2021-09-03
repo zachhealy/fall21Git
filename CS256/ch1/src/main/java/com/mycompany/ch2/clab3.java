@@ -21,7 +21,7 @@ public class clab3 {
     class MyInteger{
         private int value;
 
-        MyInteger(int num){
+        public MyInteger(int num){
             value = num;
 
         }
@@ -53,13 +53,52 @@ public class clab3 {
                 if (value % i == 0){
                     return false;
                     
-                }else{
-                    return true;
-
                 }
+            }
+        }
+        boolean isEven(int x) {
+            if (x % 2 != 0 ){
+                return false;
 
+            }else{
+                return true;
             }
 
+        }
+        boolean isOdd(int x) {
+            if (x % 2 == 0 ){
+                return false;
+
+            }else{
+                return true;
+            }
+
+        }
+        boolean isPrime(int x) {
+            for (int i = 2; i <= value; i++){
+                if (x % i == 0){
+                    return false;
+                    
+                }
+            }
+        }
+        boolean equals(int x){
+            if(x == value){
+                return true;
+
+            }else{
+                return false;
+            }
+
+        }
+        int parseInt(char[] list){
+            int x = Character.getNumericValue(list);
+            return x;
+
+        }
+        int parseInt(String string){
+            int x = string;
+            return x;
         }
 
 
