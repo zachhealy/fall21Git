@@ -18,7 +18,7 @@ public class clab3 {
         System.out.println("n1 is equal to n2? "+ n1.equals(n2));
         System.out.println("n1 is equal to 5? "+ n1.equals(5));
     }
-    class MyInteger{
+    static class MyInteger{
         private int value;
 
         public MyInteger(int num){
@@ -30,7 +30,7 @@ public class clab3 {
             return value;
 
         }
-        boolean isEven() {
+        public boolean isEven() {
             if (value%2 != 0 ){
                 return false;
 
@@ -39,24 +39,25 @@ public class clab3 {
             }
 
         }
-        boolean isOdd() {
+        public boolean isOdd() {
             if (value%2 == 0 ){
-                return false;
+                return true;
 
             }else{
-                return true;
+                return false;
             }
 
         }
-        boolean isPrime() {
+        public boolean isPrime() {
             for (int i = 2; i <= value; i++){
                 if (value % i == 0){
                     return false;
                     
                 }
             }
+            return true;
         }
-        boolean isEven(int x) {
+        public static boolean isEven(int x) {
             if (x % 2 != 0 ){
                 return false;
 
@@ -65,7 +66,7 @@ public class clab3 {
             }
 
         }
-        boolean isOdd(int x) {
+        public static boolean isOdd(int x) {
             if (x % 2 == 0 ){
                 return false;
 
@@ -74,15 +75,16 @@ public class clab3 {
             }
 
         }
-        boolean isPrime(int x) {
-            for (int i = 2; i <= value; i++){
+        public static boolean isPrime(int x) {
+            for (int i = 2; i <= x; i++){
                 if (x % i == 0){
                     return false;
                     
                 }
             }
+            return true;
         }
-        boolean equals(int x){
+        public boolean equals(int x){
             if(x == value){
                 return true;
 
@@ -91,14 +93,12 @@ public class clab3 {
             }
 
         }
-        int parseInt(char[] list){
-            int x = Character.getNumericValue(list);
-            return x;
+        public static int parseInt(char[] list){
+            return parseInt(new String(list));
 
         }
-        int parseInt(String string){
-            int x = string;
-            return x;
+        public static int parseInt(String string){
+            return Integer.parseInt(string);
         }
 
 
