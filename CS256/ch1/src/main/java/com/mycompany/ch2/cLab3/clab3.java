@@ -1,4 +1,4 @@
-package com.mycompany.ch2;
+package com.mycompany.ch2.cLab3;
 
 /*  
 Author: Zach Healy
