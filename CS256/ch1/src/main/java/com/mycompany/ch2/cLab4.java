@@ -56,7 +56,7 @@ class Circle2D {
 
     }
     public boolean contains(Circle2D circle){
-        if(circle.getX() < x && circle.getY() < y){
+        if(circle.getX() < x && circle.getY() < y && circle.getRadius() < radius){
             return true;
 
         }
