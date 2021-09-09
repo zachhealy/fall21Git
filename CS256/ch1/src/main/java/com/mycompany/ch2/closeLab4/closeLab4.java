@@ -1,4 +1,4 @@
-package com.mycompany.ch2.cLab4;
+package com.mycompany.ch2.closeLab4;
 
 import java.lang.Math;
 
@@ -9,7 +9,7 @@ Purpose: Create a class that will define if a circle is contained or overlaps an
          as well as being able to print out area, permieter, and other information.
 */
 
-public class cLab4{
+public class closeLab4 {
     public static void main(String[] args) {
         Circle2D c1 = new Circle2D(2, 2, 5.5);
         System.out.println("Area is "+ c1.getArea());
