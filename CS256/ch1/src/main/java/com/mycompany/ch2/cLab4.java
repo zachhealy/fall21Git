@@ -1,5 +1,14 @@
 package com.mycompany.ch2;
 
+import java.lang.Math;
+
+/*  
+Author: Zach Healy
+Date: 9/9/2021
+Purpose: Create a class that will define if a circle is contained or overlaps another
+         as well as being able to print out area, permieter, and other information.
+*/
+
 public class cLab4 {
     public static void main(String[] args) {
         Circle2D c1 = new Circle2D(2, 2, 5.5);
@@ -27,7 +36,7 @@ class Circle2D {
         radius = newRad;
 
     }
-    
+
     public double getX() {
         return x;
     }
@@ -47,16 +56,21 @@ class Circle2D {
         return 2 * 3.14 * radius;
 
     }
+    private double getDistance(double x2, double y2){
+        double dist = Math.sqrt(Math.pow((y2 - y), 2) + Math.pow((x2 - x), 2));
+        return dist;
+        
+    }
     public boolean contains(double testX, double testY){
-        if(testX < x && testY < y){
-            return false;
+        if(getDistance(testX, testY) <= radius){
+            return true;
 
         }
-        return true;
+        return false;
 
     }
     public boolean contains(Circle2D circle){
-        if(circle.getX() < x && circle.getY() < y && circle.getRadius() < radius){
+        if(getDistance(circle.getX(), circle.getY()) + circle.getRadius() <= radius){
             return true;
 
         }
@@ -64,11 +78,11 @@ class Circle2D {
     }
     
     public boolean overlaps(Circle2D circle){
-        if(circle.getX() > x || circle.getY() > y){
-            return false;
+        if(getDistance(circle.getX(), circle.getY()) <= circle.getRadius() + radius){
+            return true;
 
         }
-        return true;
+        return false;
 
     }
 
