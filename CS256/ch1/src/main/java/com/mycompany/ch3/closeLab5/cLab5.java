@@ -1,5 +1,10 @@
-package com.mycompany.ch3;
-
+package com.mycompany.ch3.closeLab5;
+/*  
+Author: Zach Healy
+Date: 9/14/2021
+Purpose: Create a class that will define a triangle, set, and recall information about
+        sides, size, color, area, and perimeter..
+*/
 public class cLab5 {
     public static void main(String[] args) {
         Triangle triangle = new Triangle(1.0, 1.5, 1.0);
@@ -11,7 +16,7 @@ public class cLab5 {
         System.out.println(triangle);
     }
 }
-public abstract class GeometricObject {
+abstract class GeometricObject {
         private String color = "White";
         private boolean filled;
         private java.util.Date dateCreated;
@@ -46,7 +51,7 @@ public abstract class GeometricObject {
                 " and filled: " + filled;
         }
         public abstract double getArea();
-        public abstract double getPerimenter();
+        public abstract double getPerimeter();
 }
 class Triangle extends GeometricObject{
     private double side1 = 1.0;
@@ -58,7 +63,7 @@ class Triangle extends GeometricObject{
         side2 = 1.0;
         side3 = 1.0;
     }
-    public void Triangle(double nSide1, double nSide2, double nSide3){
+    public Triangle(double nSide1, double nSide2, double nSide3){
         side1 = nSide1;
         side2 = nSide2;
         side3 = nSide3;
@@ -73,19 +78,16 @@ class Triangle extends GeometricObject{
     public double getSide3() {
         return side3;
     }
-    @Override
     public double getArea() {
         double height = 2 * (side1 * side2);
         return (side1 * height)/2;  
     }
-    @Override
     public double getPerimeter() {
         return side1 + side2 + side3;
     }
     public String toString(){
-        return "Triangle: Side 1 =" + side1 + " side 2 = " + side2 + " side 3 " + side3;
+        return "Triangle: Side 1 = " + side1 + " side 2 = " + side2 + " side 3 " + side3;
         
     }
-
 }
 
