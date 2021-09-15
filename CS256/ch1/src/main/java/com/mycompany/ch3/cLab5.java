@@ -2,7 +2,7 @@ package com.mycompany.ch3;
 
 public class cLab5 {
     public static void main(String[] args) {
-        Triangle triangle = new Triangle(1, 1.5, 1);
+        Triangle triangle = new Triangle(1.0, 1.5, 1.0);
         triangle.setColor("yellow");
         triangle.setFilled(true);
         System.out.println(triangle);
@@ -73,11 +73,13 @@ class Triangle extends GeometricObject{
     public double getSide3() {
         return side3;
     }
+    @Override
     public double getArea() {
         double height = 2 * (side1 * side2);
         return (side1 * height)/2;  
     }
-    public double getPerimenter() {
+    @Override
+    public double getPerimeter() {
         return side1 + side2 + side3;
     }
     public String toString(){
