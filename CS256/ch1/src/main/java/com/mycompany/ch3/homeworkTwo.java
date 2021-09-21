@@ -7,7 +7,7 @@ public class homeworkTwo{
         MyStack list = new MyStack();
         list.push(11);
         System.out.println(list);
-    }   
+    }  
 }
 
 class MyStack {

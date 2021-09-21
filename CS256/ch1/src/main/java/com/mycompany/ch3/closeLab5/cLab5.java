@@ -16,6 +16,7 @@ public class cLab5 {
         System.out.println(triangle);
     }
 }
+
 abstract class GeometricObject {
         private String color = "White";
         private boolean filled;
