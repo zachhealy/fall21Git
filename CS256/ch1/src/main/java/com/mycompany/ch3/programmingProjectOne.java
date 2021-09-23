@@ -31,11 +31,12 @@ public class programmingProjectOne {
     }
 
     class Complex{
-        int realPart;
-        int imagePart;
+        double realPart;
+        double imagePart;
 
         public Complex(double a, double b){
-
+            realPart = a;
+            imagePart = b;
 
         }
         public Complex(double a){
@@ -46,15 +47,15 @@ public class programmingProjectOne {
 
 
         }
-        public int getRealPart(){
-            return realPart;
+        public double getRealPart(){
+            return this.realPart;
 
         }
-        public int getImaginaryPart(){
-            return imagePart;
+        public double getImaginaryPart(){
+            return this.imagePart;
         }
-        public add(){
-            int sum = ;
+        public double add(){
+            int sum = 0;
             return sum;
 
         }
