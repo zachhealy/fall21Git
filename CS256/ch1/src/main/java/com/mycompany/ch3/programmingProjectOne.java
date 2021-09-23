@@ -1,5 +1,9 @@
 package com.mycompany.ch3;
-
+/*  
+Author: Zach Healy, Noah Little, Trinity Smallwood, Jace Lowe, Jalik Smith
+Date: 9/23/2021
+Purpose: To do mathematical operations when using complex/imaginary numbers
+*/
 import java.util.Scanner;
 import java.lang.Math;
 
