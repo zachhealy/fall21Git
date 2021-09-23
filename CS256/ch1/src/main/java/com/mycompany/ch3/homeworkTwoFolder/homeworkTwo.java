@@ -1,4 +1,4 @@
-package com.mycompany.ch3;
+package com.mycompany.ch3.homeworkTwoFolder;
 
 import java.util.ArrayList;
 
