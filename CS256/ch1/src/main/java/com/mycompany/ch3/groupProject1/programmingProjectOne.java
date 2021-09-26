@@ -1,6 +1,6 @@
 package com.mycompany.ch3.groupProject1;
 /*  
-Author: Zach Healy, Noah Little, Trinity Smallwood, Jace Lowe, Jalik Smith
+Author: Zach Healy, Noah Little, Trinity Smallwood, Jace Lowe, Jalik Smith, Cole Huntley
 Date: 9/23/2021
 Purpose: To do mathematical operations when using complex/imaginary numbers
 */
