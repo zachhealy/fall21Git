@@ -1,4 +1,4 @@
-package com.mycompany.ch3;
+package com.mycompany.ch3.groupProject1;
 /*  
 Author: Zach Healy, Noah Little, Trinity Smallwood, Jace Lowe, Jalik Smith
 Date: 9/23/2021

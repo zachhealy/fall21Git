@@ -1,4 +1,4 @@
-package com.mycompany.ch3;
+package com.mycompany.ch3.groupProject1;
 
 import java.lang.Math;
 
