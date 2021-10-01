@@ -10,7 +10,9 @@ public class cLab7 {
         System.out.println("Enter a file for baby name ranking: ");
         String fileInput = input.nextLine();
 
-        input = new Scanner(new File(fileInput));
+        input = new Scanner(new File(
+                "C:/Users/zjhea/Documents/GitHub/fall21Git/CS256/ch1/src/main/java/com/mycompany/ch3/closeLab7/"
+                        + fileInput));
 
         Set<String> set1 = new HashSet<>();
         Set<String> set2 = new HashSet<>();
@@ -23,7 +25,16 @@ public class cLab7 {
             input.nextInt();
 
         }
-        System.out.println(set1);
+        set1.retainAll(set2);
+
+        Iterator it = set1.iterator();
+        int count = 1;
+        while (it.hasNext()) {
+            System.out.print(it.next() + ", ");
+            if (count % 10 == 0)
+                System.out.println();
+            count++;
+        }
 
     }
 
