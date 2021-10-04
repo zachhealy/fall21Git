@@ -18,7 +18,7 @@ After loading the image, you can set the view for the image by instantiating the
 
 ImageView imageView = new ImageView(image);
  */
-package javafxapplication02;
+package com.mycompany.ch4.unit4Notes;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

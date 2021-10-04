@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javafxapplication5;
+package com.mycompany.ch4.unit4Notes;;
 
 import java.io.FileInputStream;
 import javafx.application.Application;

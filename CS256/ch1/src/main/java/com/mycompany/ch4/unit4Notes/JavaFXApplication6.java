@@ -10,7 +10,7 @@ Modelity.APPLICATION_MODAL
 2 Modelity.WINDOW_MODAL	When you open a new window with this modelity, it will lock the parent window. You can not interact with the parent window until this window is closed.
 3 Modelity.APPLICATION_MODAL	When you open a new window with this modelity, it will lock any other windows of the application. You can not interact with any other windows  until this window is closed.
  */
-package javafxapplication6;
+package com.mycompany.ch4.unit4Notes;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;

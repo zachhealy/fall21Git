@@ -1,25 +1,25 @@
 /*
  JavaFX multiple scenes and GridPane and shapes
  */
-package javafxapplication03;
+package com.mycompany.ch4.unit4Notes;
+
+import org.graalvm.compiler.phases.common.NodeCounterPhase.Stage;
+import org.w3c.dom.Text;
 
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.scene.text.Text;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.FontPosture;
-import javafx.scene.layout.Pane;
+import javafx.scene.text.FontWeight;
+import jdk.internal.org.jline.terminal.MouseEvent.Button;
 
 /**
  *
