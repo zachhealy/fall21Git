@@ -3,7 +3,6 @@
  */
 package com.mycompany.ch4.unit4Notes;
 
-import javafx.*;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
