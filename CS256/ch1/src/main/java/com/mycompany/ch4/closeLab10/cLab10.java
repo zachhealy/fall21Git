@@ -1,34 +1,43 @@
 package com.mycompany.ch4.closeLab10;
+
 /*  
 Author: Zach Healy
 Date: 10/18/2021
-Purpose: 
+Purpose: This program will read a file line by line and then print out a new file
+        that will tell if each line is a palindrome or not.
 */
-import java.util.ArrayList;
-import java.util.Stack;
+
 import java.io.*;
 
 public class cLab10 {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
+        ListStack<Character> stack = new ListStack<>();
+        BufferedReader read = new BufferedReader(new FileReader("/Users/zachhealy/Desktop/Programming Files/fall21Git/fall21Git/CS256/ch1/src/main/java/com/mycompany/ch4/closeLab10/palindrome.txt"));
+        BufferedWriter write = new BufferedWriter(new FileWriter("/Users/zachhealy/Desktop/Programming Files/fall21Git/fall21Git/CS256/ch1/src/main/java/com/mycompany/ch4/closeLab10/output.txt"));
+        String str;
+        while((str = read.readLine()) != null){
+            str = str.toLowerCase().replaceAll("\\W", "");
+            for(int i=0; i<str.length(); i++){
+                stack.push(str.charAt(i));
+            }
+            String reverse="";
+            while (!stack.isEmpty()){
+                reverse += stack.pop().toString();
+            }
+            if(str.equals(reverse)){
+                write.write("Is a palindrome: " + reverse);
+                write.newLine();
+            }
+            else{
+                write.write("Not a palindrome");
+                write.newLine();
+            }
+        }
+
+        read.close();
+        write.close();
+    }
         
 
-    }
-    class Stack<E>{
-        private ArrayList<E> stack;
-        File file = new File("palindrome.txt");
-        FileReader fr = new FileReader(file);
-        BufferedReader br = new BufferedReader(fr);
-        StringBuffer sb = new StringBuffer();
-
-        String line = "pussy";
-        while ((line = br.readLine()) != null) {
-            stack.push(line);
-
-        }
-        while (stack.peek() != null) {
-            System.out.println(stack.pop());
-        }
-    }
-}    
-
-
+}
+    
