@@ -6,10 +6,11 @@ Date: 10/23/2021
 Purpose: 
 */
 
-import java.util.Scanner;
 import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Queue;
 
-public class StackInt implements Cloneable {
+public class questionTwo implements Cloneable {
 
     private static final int CAPACITY = 8;
     private int[] m_array;
@@ -23,24 +24,18 @@ public class StackInt implements Cloneable {
         stack.push(1);
         stack.push(2);
 
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("How many items do you want removed from stack?");
-        int remv = input.nextInt();
-
         System.out.println("Original stack: " + stack);
-        Remove(stack, remv);
-        System.out.println("Removing top " + remv + " items ");
-        System.out.println("Modified stack: " + stack);
+        ReverseStack(stack);
+        System.out.println("Reversed stack: " + stack);
 
     }
 
-    public StackInt() {
+    public questionTwo() {
         m_array = new int[CAPACITY];
         m_top = -1;
     }
 
-    public StackInt(int[] p_array) {
+    public questionTwo(int[] p_array) {
         m_array = new int[CAPACITY];
         m_top = p_array.length - 1;
         try {
@@ -82,18 +77,13 @@ public class StackInt implements Cloneable {
         return m_array[m_top];
     }
 
-    public static void Remove(Stack stack1, int n) {
-        Stack stack = new Stack();
-        int i = 0;
-        while (!stack1.isEmpty()) {
-            if (i >= n) {
-                stack.add(stack1.peek());
-            }
-            stack1.pop();
-            i++;
+    public static void ReverseStack(Stack aStack) {
+        Queue queue = new ArrayDeque();
+        while (!aStack.isEmpty()) {
+            queue.add(aStack.pop());
         }
-        while (!stack.isEmpty()) {
-            stack1.push(stack.pop());
+        while (!queue.isEmpty()) {
+            aStack.push(queue.remove());
         }
     }
 
@@ -111,7 +101,7 @@ public class StackInt implements Cloneable {
 
     @Override
     public Object clone() {
-        StackInt st = new StackInt();
+        questionTwo st = new questionTwo();
         st.m_top = m_top;
         st.m_array = m_array.clone();
 

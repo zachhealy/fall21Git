@@ -8,8 +8,10 @@ Purpose:
 
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Queue;
 
-public class StackInt implements Cloneable {
+public class questionThree implements Cloneable {
 
     private static final int CAPACITY = 8;
     private int[] m_array;
@@ -25,22 +27,22 @@ public class StackInt implements Cloneable {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("How many items do you want removed from stack?");
+        System.out.println("Which item do you want removed from the stack?");
         int remv = input.nextInt();
 
         System.out.println("Original stack: " + stack);
-        Remove(stack, remv);
-        System.out.println("Removing top " + remv + " items ");
+        RemoveItem(stack, remv);
+        System.out.println("Removing number " + remv + " from the stack ");
         System.out.println("Modified stack: " + stack);
 
     }
 
-    public StackInt() {
+    public questionThree() {
         m_array = new int[CAPACITY];
         m_top = -1;
     }
 
-    public StackInt(int[] p_array) {
+    public questionThree(int[] p_array) {
         m_array = new int[CAPACITY];
         m_top = p_array.length - 1;
         try {
@@ -82,18 +84,16 @@ public class StackInt implements Cloneable {
         return m_array[m_top];
     }
 
-    public static void Remove(Stack stack1, int n) {
-        Stack stack = new Stack();
-        int i = 0;
-        while (!stack1.isEmpty()) {
-            if (i >= n) {
-                stack.add(stack1.peek());
+    public static void RemoveItem(Stack<Integer> aStack, int item) {
+        Stack<Integer> temp = new Stack<>();
+        while (!aStack.isEmpty()) {
+            if (aStack.peek() != item) {
+                temp.push(aStack.peek());
             }
-            stack1.pop();
-            i++;
+            aStack.pop();
         }
-        while (!stack.isEmpty()) {
-            stack1.push(stack.pop());
+        while (!temp.isEmpty()) {
+            aStack.push(temp.pop());
         }
     }
 
@@ -111,7 +111,7 @@ public class StackInt implements Cloneable {
 
     @Override
     public Object clone() {
-        StackInt st = new StackInt();
+        questionThree st = new questionThree();
         st.m_top = m_top;
         st.m_array = m_array.clone();
 
