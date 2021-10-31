@@ -1,9 +1,6 @@
 package com.mycompany.ch4.programmingProject3;
 
-import java.io.*;
 import java.util.*;
-import java.io.IOException;
-
 /**
  *  Authors: Zach Healy, Noah Little, Trinity Smallwood, Jace Lowe, and Cole Huntley
  *  Date: October 29, 2021
