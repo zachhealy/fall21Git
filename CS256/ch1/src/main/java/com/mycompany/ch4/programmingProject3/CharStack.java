@@ -8,11 +8,12 @@ import java.util.*;
 public class CharStack {
     private Stack<Character> myCharacters; // STL stack of chars.
 
-    public void StringToStack(String inStr) {
+    public void StringToStack(String str) {
         myCharacters = new Stack<>();
-        for (Character c : inStr.toCharArray()) {
+        for (Character c : str.toCharArray()) {
             if (Character.isAlphabetic(c)) {
                 myCharacters.push(c);
+                
             }
         }
     }
@@ -22,10 +23,12 @@ public class CharStack {
         if (myCharacters.empty()) {
             System.out.println("Stack is empty.");
             return null;
+
         }
         CharStack s = new CharStack();
         while (!myCharacters.empty()) {
             s.myCharacters.push(myCharacters.pop());
+
         }
         return s;
     }
@@ -40,6 +43,7 @@ public class CharStack {
 
         } else {
             return false;
+
         }
     }
 
@@ -48,6 +52,7 @@ public class CharStack {
         String s1 = "";
         for(int i=0; i<myCharacters.size(); i++){
             s1 += myCharacters.get(i);
+
         }
         return s1;
     }
