@@ -13,7 +13,7 @@ public class closeLab11 {
         char c = '*';
         int n = 5;
         int m = 5;
-        String s = "Hello";
+        String s = "HELLO";
         ArrayList al = new ArrayList<Integer>();
 
         al.add(n);
@@ -35,7 +35,7 @@ public class closeLab11 {
         System.out.println();
         System.out.println();
         System.out.println("displayArrayList output: ");
-        displayArrayList(al, n, m);
+        displayArrayList(al, 0, 4);
 
         System.out.println();
         System.out.println("vowels output: ");
@@ -44,6 +44,8 @@ public class closeLab11 {
         System.out.println();
         System.out.println("reverseString output: ");
         reverseString(s);
+
+        System.out.println();
     }
 
     public static void writeLine(char c, int n) {
@@ -71,28 +73,31 @@ public class closeLab11 {
         }
     }
 
-    public static void displayArrayList(ArrayList<Integer> a, int first, int last) {
+    public static void displayArrayList(ArrayList a, int first, int last) {
+        if(first >= last){
+            return;
 
+        }else{
+            System.out.println(a.get(first));
+            displayArrayList(a, first + 1, last);
+
+        }
     }
 
     public static int vowels(String s, int size) {
-        if (size == 1) {
-            return isVowel(s.charAt(size - 1));
-        }
-        return vowels(s, size - 1) + isVowel(s.charAt(size - 1));
-
-    }
-
-    public static int isVowel(char c) {
-        Character.toUpperCase(c);
-        if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
-            return 1;
-        } else {
+        s.toUpperCase();
+        if (size == 0) {
             return 0;
+        }
+        if (s.charAt(size - 1) == 'A' || s.charAt(size - 1) == 'E' 
+        || s.charAt(size - 1) == 'I' || s.charAt(size - 1) == 'O' || s.charAt(size - 1) == 'U') {
+            return 1 + vowels(s.substring(0, size-1), size - 1);
 
         }
+        return vowels(s.substring(0, size-1), size - 1);
 
     }
+
 
     public static void reverseString(String s) {
         if (s.length() != 0) {
