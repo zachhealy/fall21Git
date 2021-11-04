@@ -1,5 +1,11 @@
 package com.mycompany.ch6.hw7;
 
+/* 
+Author: Zach Healy
+Problem: 18.13
+Description: Takes two numbers and outputs the greatest common denominator
+*/
+
 import java.util.Scanner;
 import java.lang.Math;
 

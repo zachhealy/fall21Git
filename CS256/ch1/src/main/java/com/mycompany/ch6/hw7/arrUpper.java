@@ -1,5 +1,11 @@
 package com.mycompany.ch6.hw7;
 
+/* 
+Author: Zach Healy
+Problem: 18.16
+Description: Count the number of upper case characters
+*/
+
 import java.util.Scanner;
 
 public class arrUpper {
@@ -33,4 +39,3 @@ public class arrUpper {
 
     }
 }
-

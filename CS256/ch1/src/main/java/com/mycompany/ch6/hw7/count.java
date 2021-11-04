@@ -2,6 +2,12 @@ package com.mycompany.ch6.hw7;
 
 import java.util.Scanner;
 
+/* 
+Author: Zach Healy
+Problem: 18.10
+Description: Counts the number of times a character is in a string
+*/
+
 public class count {
     public static void main(String[] args) {
         String str;
