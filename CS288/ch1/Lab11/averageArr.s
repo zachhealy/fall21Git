@@ -23,7 +23,7 @@ main:
         move $a0, $s2 #moves s2 to a0 for printing
         syscall #print
 
-        blt $s1, 8, Loop
+        blt $s1, $s3, Loop
 
 
 #ends code
