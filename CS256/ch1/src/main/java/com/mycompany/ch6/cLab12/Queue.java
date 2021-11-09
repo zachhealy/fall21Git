@@ -123,9 +123,10 @@ public class Queue implements Cloneable,Iterable{
             // Default throws UnsupportedOperationException. 
             throw new UnsupportedOperationException();
         } 
-        public int back(){
-            return mArray[mBack];
+        
+    }     
+    public int back(){
+        return mArray[mBack - 1];
 
-        }
-    }      
+    } 
 }

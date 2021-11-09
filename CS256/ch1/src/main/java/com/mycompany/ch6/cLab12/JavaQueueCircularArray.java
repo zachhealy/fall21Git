@@ -23,13 +23,12 @@ public class JavaQueueCircularArray {
         
         for(int i = 1; i < num + 1; i++)
             q1.enqueue(i*100);
-
-        System.out.println("Back element: " + q1.back());
         
         System.out.println("Contents of Queue:\n" + q1.toString());
         System.out.println("Queue Empty? " + q1.empty());
         
         System.out.println("Front value in q1: " + q1.front());
+        System.out.println("Back value in q1: " + q1.back());
 
         if(search(300, q1))
             System.out.println("found the item 300");
@@ -84,6 +83,6 @@ public class JavaQueueCircularArray {
                 return true;
         
         return false;  
-    }   
+    }  
     
 }
