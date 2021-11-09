@@ -20,13 +20,13 @@ main:
     lw $t1, length
     li $t2, 0 #Sum
     li $t3, 0 #i
-    sumLoop:
+    Loop:
         lw $t4,  ($t0)
         add $t2, $t2, $t4
 
         add $t3, $t3, 1
         add $t0, $t0, 4
-        blt $t3, $t1, sumLoop
+        blt $t3, $t1, Loop
         sw $t2, sum
 
     div $t5, $t2, $t1
