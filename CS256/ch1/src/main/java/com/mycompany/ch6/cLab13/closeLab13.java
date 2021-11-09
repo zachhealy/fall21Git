@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class closeLab13 {
     public static void main(String[] args) {
         Deque q1 = new Deque();
+
         System.out.println("Queue created. Empty? " + q1.empty());
         
         System.out.println("How many elements to add to the queue?");
@@ -20,22 +21,10 @@ public class closeLab13 {
         System.out.println("Front value in q1: " + q1.front());
         System.out.println("Back value in q1: " + q1.back());
 
-        if(search(300, q1))
-            System.out.println("found the item 300");
-        else
-            System.out.println("item 300 not found");
+        q1.push_front(600);
         
-        if(search2(500, q1))
-            System.out.println("found the item 500");
-        else
-            System.out.println("item 500 not found");        
-        
-        while (!q1.empty())
-        {
-            System.out.println("Remove front -- Queue contents: ");
-            q1.pop_front();
-            System.out.println(q1.toString());
-        }
+        System.out.println("Front value in q1: " + q1.front());
+
         
         System.out.println("Queue Empty? " + q1.empty());
         System.out.println("Now try to retrieve front value in q1: ");
@@ -52,16 +41,21 @@ public class closeLab13 {
         }
         catch(EmptyQueueException ex){
             System.out.println(ex);
-        }        
+        }     
+
+        q1.pop_back();
+        System.out.println("Remove back elemnt: ");
+        System.out.println(q1.toString());
+
     }
     
     public static boolean search(int item, Deque q1) 
     {
-        Queue qCopy;
-        qCopy = (Queue)q1.clone();
+        Deque qCopy;
+        qCopy = (Deque)q1.clone();
        
         while(!qCopy.empty() && qCopy.front() != item)
-            qCopy.dequeue();
+            qCopy.pop_front();
         
         return !qCopy.empty();  
     }   

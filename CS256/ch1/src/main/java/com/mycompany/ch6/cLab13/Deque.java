@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 public class Deque implements Cloneable, Iterable{
     private int mFront, mBack;
     private int[] mArray;
-    private final int DEFAULT_CAPACITY = 6;
+    private final int DEFAULT_CAPACITY = 10;
     
     public Deque(){
         mFront = 0;
@@ -25,11 +25,15 @@ public class Deque implements Cloneable, Iterable{
 
     }
     public void push_front(int item){
-        if((mFront + 1) % mArray.length == mBack)
+        if((mBack + 1) % mArray.length == mFront)
             throw new FullQueueException("Queue");
-        
+
+        if(mFront == 0){
+            mFront = mArray.length - 1;
+        }else{
+            mFront = mFront - 1;
+        }
         mArray[mFront] = item;
-        mFront = (mFront + 1) % mArray.length;
 
     }
     public void push_back(int item){
@@ -61,7 +65,7 @@ public class Deque implements Cloneable, Iterable{
         if(mFront == mBack)
             throw new EmptyQueueException("Queue");
         
-        mBack = (mBack + 1) % mArray.length;
+        mBack = (mBack - 1) % mArray.length;
     }
     
     @Override
@@ -108,5 +112,17 @@ public class Deque implements Cloneable, Iterable{
             // Default throws UnsupportedOperationException. 
             throw new UnsupportedOperationException();
         } 
+    }
+    @Override
+    public String toString()
+    {
+        String result;
+        StringBuilder sb = new StringBuilder();
+
+        for(int i = mFront; i != mBack; i = (i+1)%mArray.length)
+          sb.append(String.valueOf(mArray[i])+"\n");
+        result =sb.toString();
+
+        return result;
     }
 }
