@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.ch6.cLab12;
 
 import java.util.Scanner;
 
-/**
- *
- * @author ziping
- */
+/*  
+Author:  Prof Ziping & Zach Healy
+Date: 11/10/2021
+Purpose: Test program using queues to help learn how they work.
+*/
 public class JavaQueueCircularArray {
 
     public static void main(String[] args) {
@@ -28,7 +24,7 @@ public class JavaQueueCircularArray {
         System.out.println("Queue Empty? " + q1.empty());
         
         System.out.println("Front value in q1: " + q1.front());
-        System.out.println("Back value in q1: " + q1.back());
+        System.out.println("Back value in q1: " + q1.back()); //Code to test back();
 
         if(search(300, q1))
             System.out.println("found the item 300");

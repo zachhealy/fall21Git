@@ -1,5 +1,7 @@
 package com.mycompany.ch6.cLab13;
 
+
+
 import java.util.Scanner;
 
 public class closeLab13 {

@@ -1,5 +1,10 @@
 package com.mycompany.ch6.cLab13;
-
+/*  
+Author: Zach Healy
+Date: 11/10/2021
+Purpose: This program implements a double ended queue. Allowing the users 
+            to add or remove numbers from both ends.
+*/
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 

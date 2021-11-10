@@ -1,5 +1,9 @@
 package com.mycompany.ch6.cLab12;
-
+/*  
+Author: Zach Healy
+Date: 11/10/2021
+Purpose: This program uses stacks and queues to do a palindrome check.
+*/
 import java.io.*;
 import java.util.*;
 import java.util.Queue;
@@ -23,7 +27,6 @@ public class cLab12 {
             while (!stack.isEmpty()) {
                     reverse += stack.peek();
                     stack.pop();
-                    System.out.println(reverse);
             }
             while (!queue.isEmpty()) {
                     reverse2 += queue.peek();
