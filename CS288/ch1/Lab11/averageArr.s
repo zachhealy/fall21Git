@@ -13,7 +13,7 @@
 main:
     la $s1, arr
     la $s2, 0 #sum
-    la $s3, 24
+    la $s3, 40
     Loop:
         lw $a0, 0($s1) #loads the array
         add $s2, $s2, $a0 #add the current array to sum
@@ -24,6 +24,13 @@ main:
         syscall #print
 
         blt $s1, $s3, Loop
+
+    li $v0, 1
+    move $a0, $s2 #moves s2 to a0 for printing
+    syscall
+
+    
+    syscall
 
 
 #ends code

@@ -85,10 +85,18 @@ main:
 	li $v0, 4				#syscall to print string
 	la $a0, strResultDiv	#load string
 	syscall					#print string
+
+
+
+
 	li $v0, 1				#syscall to print integer
-	div $a0, $s0, $s1		#perform divisoin ($a1 = $s0 / $s1)
+	div $a0, $s0, $s1		#perform divisoin ($a0 = $s0 / $s1)
 	mflo $a0				#perform mflo
 	syscall					#print integer
+
+
+
+
 	li $v0, 4				#syscall to print string
 	la $a0, strCR			#load string (newline character)
 	syscall					#print string
