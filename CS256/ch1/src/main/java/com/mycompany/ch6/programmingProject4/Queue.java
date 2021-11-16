@@ -3,7 +3,8 @@
  * Date: Nov 15, 2021
  * Function: 
  */
-package project4;
+package com.mycompany.ch6.programmingProject4;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;

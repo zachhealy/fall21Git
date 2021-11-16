@@ -10,11 +10,11 @@ public class removeDups {
         list.add(3);
         list.add(4);
         list.add(7);
-        removeDupli(list);
-        System.out.println(list);
+        ArrayList<Integer> nList = removeDuplicates(list);
+        System.out.println(nList);
 
     }
-    public static <E> ArrayList<E> removeDupli(ArrayList<E> list){
+    public static <E> ArrayList<E> removeDuplicates(ArrayList<E> list){
         ArrayList<E> nList = new ArrayList<E>();
         for(int i = 0; i < list.size(); i++){
             if(!nList.contains(list.get(i))){

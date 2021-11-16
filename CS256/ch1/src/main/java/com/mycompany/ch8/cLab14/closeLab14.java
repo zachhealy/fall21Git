@@ -6,8 +6,8 @@ class closeLab14 {
         Complex[][] m2 = createMatrix(3);
 
 
-        ComplexMatrix matrix = new ComplexMatrix();
-        ComplexMatrix.printResult(m1, m2, matrix.addMatrix(m1, m2), '+');
+        //ComplexMatrix matrix = new ComplexMatrix();
+        //ComplexMatrix.printResult(m1, m2, matrix.addMatrix(m1, m2), '+');
 
     }
 
@@ -24,7 +24,7 @@ class closeLab14 {
     }
 
 }
-
+/*
 class ComplexMatrix extends GenericStack<Complex> {
     @Override
     protected Complex add(Complex o1, Complex o2) {
@@ -41,3 +41,4 @@ class ComplexMatrix extends GenericStack<Complex> {
         return new Complex(0);
     }
 }
+*/
