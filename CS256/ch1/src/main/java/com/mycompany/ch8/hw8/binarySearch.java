@@ -8,15 +8,16 @@ public class binarySearch {
         }
         int pos = binarySearch(list, 3);
         System.out.println("The number 3 is at position: " + pos);
-        
+
     }
-    public static <E extends Comparable<E>> int binarySearch(E[] list, E key){
-        for(int i = 0; i < list.length; i++){
-            if(list[i] == key){
+
+    public static <E extends Comparable<E>> int binarySearch(E[] list, E key) {
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == key) {
                 return i + 1;
 
             }
         }
         return -1;
     }
-}   
+}
