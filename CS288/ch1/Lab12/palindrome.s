@@ -1,6 +1,7 @@
-# palindrome.s
-# Checks if input is palindrome
-# Zach Healy
+#palindrome.s
+#Lab 12
+#checks if an input is palindrome
+
 
 #1 prompt 'enter string'
 #2 read input
@@ -10,60 +11,58 @@
     #no, display not Palindrome and exit
 #5 if left==right then display is palindrome and exit
 
-# data secion
-.data
-    theStr:   .space 30
-    in:       .asciiz "Enter a string: "
-    notLab:   .asciiz "Not a Palindrome: "
-    aLab:   .asciiz "Palindrome: "
+ .data 
+ 	myStr: 		.space 32
+	in: 		.asciiz "Enter your string: "
+	pali: 	    .asciiz "The line is a palindrome."
+	notPali: 	.asciiz "The line is not a palindrome."
 
-# code section
 .text
 .globl main
 
-main:
-    la $a0, in
-    li $v0, 4
-    syscall
+main: 
+	la $a0, in
+	li $v0, 4
+	syscall
 
-    #input from user
-    li      $v0, 8 
-    la      $a0, theStr 
-    li      $a1, 32 
-    syscall 
+	li      $v0, 8 
+	la      $a0, myStr
+	li      $a1, 64 
+	syscall 
+	   
+	la $t0, 10
+	la $s0, myStr
+	la $s1, myStr
 
-    la $t0, 10
-    la $s0, in
-    la $s1, in
-
-    newLine:
-        addi $s1, $s1, 1
-        lb $t1, 0($s1)
-        beq $t1, $t0, last
-        j newLine
-
-    last:
-        addi $s1, $s1, -1
-
-    loopB: # loop to compare the characters
-		lb $t4, ($s1) #load s1 into t4
-		lb $t5, ($s0) #load s0 into t5
-		beq $t5, $0, output1 #if front index is equal to '\n' output1
-		bne $t4, $t5, output2 #if front pointer is not equal to back pointer, output2
-		addi $s0, $s0, 1 #move indexes
+	newLine: 
+		addi $s1, $s1, 1
+		lb   $t1, 0($s1)
+		beq $t1, $t0, last 
+		j newLine
+		
+	last:
 		addi $s1, $s1, -1
-		j loopB #loopB
-
-    pali:
-        li $v0, 4
-		la $a0, aLab
+		
+	compare:
+		lb $s2, ($s1)
+		lb $s3, ($s0) 
+		beq $s3, $t0, paliPrint 
+		bne $s2, $s3, notPlaiPrint 
+		addi $s0, $s0, 1 
+		addi $s1, $s1, -1
+		j compare 
+	
+	paliPrint: 
+		li $v0, 4
+		la $a0, pali
+		syscall
+		li $v0, 10      
+		syscall         
+		
+	notPlaiPrint:
+		li $v0, 4
+		la $a0, notPali
 		syscall
 		li $v0, 10
 		syscall
 
-    notPali:
-        li $v0, 4
-		la $a0, notLab
-		syscall
-		li $v0, 10
-		syscall
