@@ -1,4 +1,4 @@
-package com.mycompany.ch8.cLab14;
+package com.mycompany.ch8.lab14Noah;
 
 import java.lang.Math;
 
