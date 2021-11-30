@@ -1,6 +1,11 @@
 package com.mycompany.ch9.cLab15;
-
 import java.io.*;
+
+/*  
+Author: Zach Healy
+Date: 11/29/2021
+Purpose: This program works with hashtables and reads a file to them.
+*/
 
 public class closeLab15 {
     public static void main(String[] args) throws IOException {
