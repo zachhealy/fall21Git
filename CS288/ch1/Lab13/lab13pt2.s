@@ -1,6 +1,5 @@
 # Program header
 # lab13pt2.s
-# Shows how to create a funtion call
 
 .data
     arr: .word 4, 5, 7, 1, 19, 2, 6
@@ -18,8 +17,8 @@ main:
     jal func
 
     #print out sum
+    move $a0, $v0
     li $v0, 1
-    move $a0, $t1
     syscall
 
     li $v0, 10
@@ -30,13 +29,13 @@ func:
     li $t1, 0 #max value
     loop:
         lw $t4, 0($t2)
-        slt  $t5, $t1, $t4
-        bne  $t5, $zero, loop2 
-        #blt $t1, $t4, loop2
+        blt $t1, $t4, loop2
 
         add $t0, $t0, 1 #counter
         add $t2, $t2, 4
         blt $t0, $t3, loop
+
+    move $v0, $t1
 
     loop2:
         move $t1, $t4
@@ -44,6 +43,5 @@ func:
         add $t0, $t0, 1 #counter
         add $t2, $t2, 4
         blt $t0, $t3, loop
-    
 
     jr $ra
