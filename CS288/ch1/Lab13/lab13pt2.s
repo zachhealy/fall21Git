@@ -3,7 +3,7 @@
 # Shows how to create a funtion call
 
 .data
-    arr: .word 1, 2, 3, 9, 5, 6, 7, 8
+    arr: .word 1, 2, 3, 4, 5, 6, 7, 10
 
 # code section
 .text
@@ -29,15 +29,18 @@ func:
     li $t0, 0 #counter
     li $t1, 0 #max value
     loop:
-        blt $t1, $s0, loop2
+        lw $s3, 0($s0)
+        blt $t1, $s3, loop2
 
         add $t0, $t0, 1 #counter
+        add $s0, $s0, 4
         blt $t0, $s1, loop
 
     loop2:
-        move $t1, $s0
+        move $t1, $s3
 
         add $t0, $t0, 1 #counter
+        add $s0, $s0, 4
         blt $t0, $s1, loop
     
 
