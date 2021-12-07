@@ -1,6 +1,5 @@
 # Program header
 # lab13.s
-# Shows how to create a funtion call
 
 .data
     called:   .asciiz "You called a function."
@@ -37,3 +36,4 @@ func:
     syscall
     
     jr $ra
+
