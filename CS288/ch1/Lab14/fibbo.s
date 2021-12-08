@@ -15,8 +15,10 @@ main:
     li $s2, 19
     la $s4, nLine
 
+    #call function
     jal func
 
+    #end program
     li $v0, 10
     syscall
 
