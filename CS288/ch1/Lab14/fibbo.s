@@ -10,9 +10,9 @@
 
 main:
     #Set up registers for the base numbers as well as the amount we are going to need
-    li $s0, 1
+    li $s0, 0
     li $s1, 1
-    li $s2, 19
+    li $s2, 20
     la $s4, nLine
 
     #call function
@@ -27,7 +27,7 @@ func:
     li $t0, 0
 
     #Print first number
-    la $a0, 1
+    la $a0, 0
     li $v0, 1
     syscall
     add $t0, $t0, 1
