@@ -4,10 +4,6 @@ package com.mycompany.finalProgram;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-/**
- *
- * @author zach healy
- */
 public class DecG<E extends Comparable<E> & Cloneable> {
     public LinkedList<E> mlist = new LinkedList<E>();
     
